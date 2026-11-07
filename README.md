@@ -47,7 +47,7 @@ As credenciais necessárias para os testes foram obtidas em **Project Settings �
 
 | Informação | Valor |
 |---|---|
-| API URL (`base_url`) | `https://[PROJECT-REF].supabase.co` |
+| API URL (`base_url`) | `[https://[PROJECT-REF].supabase.co](https://nzwwzfpejxrkvrihyvcy.supabase.co` |
 | API Key (`api_key`) | `XXXXX` (omitida por segurança) |
 
 ## Objetivo da configuração
