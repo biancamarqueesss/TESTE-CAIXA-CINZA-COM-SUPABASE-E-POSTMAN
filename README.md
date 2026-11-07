@@ -59,6 +59,7 @@ Criar um serviço de autenticação real e controlado, com um usuário válido c
 ## Como o Workspace foi criado
 
 No Postman Desktop, em **Workspaces → Create Workspace**, foi criado o workspace, ID:7d149b0c-b28f-4669-81c1-441da36ad80c
+link: https://biancamarqueesss-5394364.postman.co/workspace/7d149b0c-b28f-4669-81c1-441da36ad80c
 
 ## Como o Environment foi configurado
 
@@ -208,7 +209,6 @@ Nenhuma falha identificada: os 7 cenários retornaram o resultado esperado.
 
 - Automatizar a coleção no **CI/CD** com o **Newman** (CLI do Postman) para regressão a cada alteração;
 - Incluir testes de **limite de tentativas** (rate limiting / força bruta) e de **expiração/renovação do token** (`refresh_token`);
-- Cobrir outros fluxos: cadastro (`/auth/v1/signup`), logout, recuperação de senha e acesso a recurso protegido com o token;
 - Testar políticas de senha (tamanho mínimo, complexidade) e e-mails com formatos extremos;
 - Incluir testes de segurança (injeção em campos, tokens adulterados ou expirados);
 - Usar dados de teste gerados dinamicamente e ambientes separados (desenvolvimento/homologação).
