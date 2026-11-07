@@ -23,13 +23,8 @@ Aplicar testes de caixa cinza em uma API de autenticação, utilizando ferrament
 
 ## Como o projeto foi criado
 
-1. Acesso ao painel em <https://supabase.com/dashboard> com a conta do aluno.
-2. Clique em **New project**, na organização pessoal.
-3. Preenchimento dos dados:
-   - **Name:** `[NOME DO PROJETO, ex.: auth-caixa-cinza-seunome]`
-   - **Database password:** senha forte gerada e guardada (não utilizada nos testes);
-   - **Region:** `[REGIÃO ESCOLHIDA, ex.: South America (São Paulo)]`
-4. Aguardo da finalização do provisionamento do projeto (alguns minutos).
+1. Criação de um novo projeto
+   - **Name:** `Teste-caixa-cinza-BiancaMarques`
 
 ## Tipo de autenticação utilizada
 
@@ -64,7 +59,7 @@ Criar um serviço de autenticação real e controlado, com um usuário válido c
 
 ## Como o Workspace foi criado
 
-No Postman Desktop, em **Workspaces → Create Workspace**, foi criado o workspace `[NOME DO WORKSPACE, ex.: Testes Caixa Cinza - Seu Nome]`, do tipo *Personal* (privado), para isolar a coleção e o ambiente desta atividade.
+No Postman Desktop, em **Workspaces → Create Workspace**, foi criado o workspace, ID:7d149b0c-b28f-4669-81c1-441da36ad80c
 
 ## Como o Environment foi configurado
 
@@ -83,7 +78,7 @@ Usar variáveis evita repetir valores em cada requisição, reduz erros de digit
 
 ## Como o Postman será utilizado nos testes
 
-O Postman monta e envia as requisições HTTP ao endpoint de autenticação, exibe status, tempo, headers e JSON de resposta e permite escrever **scripts de teste** (aba *Tests*) com asserções automáticas sobre status e conteúdo. A coleção `Supabase Auth - Testes Caixa Cinza` (disponível em [`/postman`](postman/)) contém um request por cenário e pode ser executada em lote pelo *Collection Runner*.
+O Postman monta e envia as requisições HTTP ao endpoint de autenticação, exibe status, tempo, headers e JSON de resposta e permite escrever **scripts de teste** (aba *Tests*) com asserções automáticas sobre status e conteúdo.
 
 # Configuração das Requisições
 
@@ -162,10 +157,6 @@ Cada cenário foi executado no Postman duplicando a requisição base (ou usando
 - **CT06:** retornou 401 Unauthorized em 47 ms com `message: Invalid API key` e um `hint` pedindo para conferir a chave anon ou service_role. 5/5 testes passaram.
 - **CT07:** retornou 401 Unauthorized em 121 ms com `message: No API key found in request` e um `hint` informando que nenhum header `apikey` foi encontrado. 5/5 testes passaram.
 
-## Validação do access token
-
-O token retornado no CT01 é um JWT de três partes (`header.payload.signature`). Seu payload foi decodificado (script de teste do Postman ou <https://jwt.io>) e conferidos os campos: token com 3 partes (header.payload.signature), `role = authenticated` e `email` igual ao usuário de teste. O campo `expires_in` foi retornado como valor numérico..
-
 ## Erros encontrados
 
 Nenhuma divergência encontrada: em todos os cenários o status e o corpo da resposta coincidiram com o esperado, e todos os testes automáticos do Postman foram aprovados.
@@ -175,7 +166,7 @@ Nenhuma divergência encontrada: em todos os cenários o status e o corpo da res
 
 ## Como os testes foram registrados
 
-Cada execução foi registrada na planilha [`planilha/registro_de_testes.xlsx`](planilha/registro_de_testes.xlsx), com uma linha por teste e as colunas: **ID do teste, Cenário, Entrada, Resultado esperado, Resultado obtido, Status (Sucesso/Falha) e Observações**.
+Cada execução foi registrada na planilha.
 
 ## Importância da documentação dos testes
 
