@@ -38,7 +38,6 @@ O usuário de teste foi criado manualmente em **Authentication → Users → Add
 |---|---|
 | E-mail | `aluno.teste.cinza@example.com` |
 | Senha | `Teste@Cinza2026` |
-| Auto Confirm User | Sim |
 
 > Usuário e senha exclusivos para esta atividade, sem uso em outros sistemas.
 
